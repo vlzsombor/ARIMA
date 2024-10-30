@@ -5,13 +5,13 @@ using NumpyDotNet;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.FileIO;
 using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 public class Program
 {
 
     public static void Main(string[] args)
     {
-
         var A = np.array(new[,] { { 1, 2, 3 }, { 1, 2, 3 } });
         var W1 = new np.random();
         var b = W1.rand(new shape(3, 3)) - 0.5;
@@ -30,13 +30,13 @@ public class Program
 
         int[,] dataArray = new int[dataArray2.Length, dataArray2[0].Length];
 
-        var y_test = new int[1001,1];
-        var x_test = new int[1001,785];
+        var y_test = new int[1000,1];
+        var x_test = new int[1000,785];
 
-        var y_train = new int[dataArray2.Length - 1000+1,1];
-        var x_train = new int[dataArray2.Length - 1000+1,785];
+        var y_train = new int[dataArray2.Length - 1000,1];
+        var x_train = new int[dataArray2.Length - 1000,785];
 
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 1000; ++i)
         {
             y_test[i,0] = dataArray2[i][0];
 
@@ -46,7 +46,7 @@ public class Program
             }
         }
 
-        for (int i = 1000; i < dataArray2.GetLength(0); i++)
+        for (int i = 1000; i < dataArray2.GetLength(0); ++i)
         {
             y_train[i -1000,0] = dataArray2[i][0];
 
@@ -57,28 +57,28 @@ public class Program
         }
 
         var neuron = new Neuron(dataArray, np.array(x_test), np.array(y_test), np.array(x_train), np.array(y_train));
-        neuron.GradientDescent(500);
+        neuron.GradientDescent(50,0.1);
     }
 
-
-
-    static T[] GetSlice<T>(T[,] array, int row)
-    {
-        int cols = array.GetLength(1);
-        var slice = new T[cols];
-
-        for (int col = 0; col < cols; col++)
-        {
-            slice[col] = array[row, col];
-        }
-
-        return slice;
-    }
 }
 
-public record class Layer(ndarray W1, ndarray b1, ndarray W2, ndarray b2);
-public record class ForwardParameter(ndarray Z1, ndarray A1, ndarray Z2, ndarray A2);
-public record class BackParamParameter(ndarray dZ2, ndarray dW2, ndarray db2, ndarray dZ1, ndarray dW1, ndarray db1);
+public record Layer
+{
+    public ndarray W1 {get; set;}
+    public ndarray b1 {get; set;}
+    public ndarray W2 {get; set;}
+    public ndarray b2 {get; set;}
+
+    public Layer(ndarray W1, ndarray b1, ndarray W2, ndarray b2)
+    {
+        this.W1 = W1;
+        this.b1 = b1;
+        this.W2 = W2;
+        this.b2 = b2;
+    }
+}
+public record ForwardParameter(ndarray Z1, ndarray A1, ndarray Z2, ndarray A2);
+public record BackParamParameter(ndarray dZ2, ndarray dW2, ndarray db2, ndarray dZ1, ndarray dW1, ndarray db1);
 
 public class Neuron
 {
@@ -92,14 +92,19 @@ public class Neuron
     public ndarray X_dev { get; set; }
     public ndarray Y_dev { get; set; }
 
+
+    private long n;
+    private long m;
+
     public Neuron(int[,] dataArray, ndarray X_test,ndarray Y_test,ndarray X_train,ndarray Y_train)
     {
         Data = np.array(dataArray);
 
         this.X_train = X_train.T;
-        this.Y_train = Y_train.T;
+        this.Y_train = (ndarray)(Y_train.T)[0];
 
-
+        this.m = Y_train.shape[0];
+        this.n = Y_train.shape[1];
 
     }
     public Layer InitParam()
@@ -129,7 +134,11 @@ public class Neuron
     }
     public static ndarray Softmax(ndarray input)
     {
-        return np.exp(input) / np.sum(np.exp(input));
+        var res1 = np.exp(input);
+        var res2 = np.exp(input);
+        var res3 = np.sum(res2, 0);
+        var res =  res1/res3;
+        return res;
     }
     public ForwardParameter ForwardProp(Layer layer, ndarray X)
     {
@@ -142,8 +151,9 @@ public class Neuron
 
     private ndarray OneHotEncode(ndarray Y)
     {
-        var oneHotEncoding = np.zeros((10, Y.size));
-        oneHotEncoding[Y, np.arange(Y.size)] = 1;
+        var oneHotEncoding = np.zeros((10, 41000));
+        // var oneHotEncoding = np.zeros((10, n));
+        oneHotEncoding[Y, np.arange(n)] = 1;
         return oneHotEncoding;
     }
 
@@ -151,24 +161,33 @@ public class Neuron
     {
         var oneHotEncoded = OneHotEncode(Y);
         var dZ2 = forwardParameter.A2 - oneHotEncoded;
-        var dW2 = 1 / Data.shape[0] * dZ2.dot(forwardParameter.A1);
-        var db2 = 1 / Data.shape[0] * np.sum(dZ2);
-        var dZ1 = 1 / Data.shape[0] * dZ2 * ReluDerivate(forwardParameter.Z1);
-        var dW1 = 1 / Data.shape[0] * dZ1.dot(X);
-        var db1 = 1 / Data.shape[0] * np.sum(dZ1);
+        var dW2 = 1 / m * dZ2.dot(forwardParameter.A1.T);
+        var db2 = 1 / m * np.sum(dZ2);
+        var dZ1 = 1 / m * dZ2 * ReluDerivate(forwardParameter.Z1);
+        var dW1 = 1 / m * dZ1.dot(X.T);
+        var db1 = 1 / m * np.sum(dZ1);
 
         return new BackParamParameter(dZ2, dW2, db2, dZ1, dW1, db1);
     }
+    public void UpdateParams(BackParamParameter backParamParameter, Layer layer, double alpha)
+    {
+        layer.W1 = layer.W1 - alpha * backParamParameter.dW1;
+        layer.b1 = layer.b1 - alpha * backParamParameter.db1;
+        layer.W2 = layer.W2 - alpha * backParamParameter.dW2;
+        layer.b2 = layer.b2 - alpha * backParamParameter.db2;
+    }
+
     public static ndarray GetPrediction(ndarray input)
     {
         return np.argmax(input, 0);
     }
-    public static long GetAccuracy(ndarray prediction, ndarray Y)
+    public static double GetAccuracy(ndarray prediction, ndarray Y)
     {
-        return prediction.Count(x => x == Y) / Y.size;
+        var count = prediction.Intersect(Y).Count();
+        return  count / Y.size;
     }
 
-    public ForwardParameter? GradientDescent(int epoch)
+    public ForwardParameter? GradientDescent(int epoch,double alpha)
     {
         var layer = InitParam();
         ForwardParameter forwardParam = null;
@@ -176,10 +195,11 @@ public class Neuron
         {
             forwardParam = ForwardProp(layer, X_train);
             var b = BackProp(forwardParam, X_train, Y_train);
-
+            UpdateParams(b, layer, alpha);
             if (i % 10 == 0)
             {
                 var prediction = GetPrediction(forwardParam.A2);
+                var s = prediction.shape;
                 var accuracy = GetAccuracy(prediction, Y_train);
                 System.Console.WriteLine($"Accuracy {accuracy}");
             }

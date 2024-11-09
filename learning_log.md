@@ -12,3 +12,5 @@
   * Sat (9. Nov):
     * Watching week 3 until the cost function, the last episode is a bit confusing (simplified)
     * Write a post draft to the blog
+    * ======(This long means pause)
+    * After a long pause I rewatched the simplification video and it is clear now.

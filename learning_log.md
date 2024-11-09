@@ -9,3 +9,6 @@
     * I finished  the _C1_W2_Linear_Regression.ipynb_ 
       * It was not 3 hours, I hid the code and did the exercises by my own
       * There was a lot of ready to use code, I don't feel I fully grasped every idea, but it will be a nice reference.
+  * Sat (9. Nov):
+    * Watching week 3 until the cost function, the last episode is a bit confusing (simplified)
+    * Write a post draft to the blog

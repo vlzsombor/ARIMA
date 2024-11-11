@@ -14,3 +14,12 @@
     * Write a post draft to the blog
     * ======(This long means pause)
     * After a long pause I rewatched the simplification video and it is clear now.
+  * Sun (10. Nov):
+    * I finished the supervised machine learning course
+    * The gradient descent calculation of the regulaziation was harder to understand
+    * I can continue with the next course of the specialization :)))
+  
+  Week 46:
+  
+  * Monday (11. Nov):
+    * Starting [Advanced algorithms](https://www.coursera.org/learn/advanced-learning-algorithms/home/week/1) week1, Neural network intuition

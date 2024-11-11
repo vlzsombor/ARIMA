@@ -13,11 +13,3 @@ If z is small, 1/big -> 0, if z is big, 1/(1+0) -> 1
 
 
 
-* Cost function:
-    * The MSE cost function would result a convex function (a lot of local minimum)
-    * Other cost function is needed
-      * If Y=1 -log(f_(w,b)(x[i]))
-      * If Y=0 log(1-f_(w,b)(x[i]))
-    * If the predicted value is not close to the actual value, high penalty (Such Y = 1, Y_hat = 0.01)
-    * If the predicted value is close to the actual value, small cost function (Such Y= 1, Y_hat = 0.99)
-    * This can be simplified into one mathematical expressionfo

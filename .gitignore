@@ -55,3 +55,4 @@ msbuild.wrn
 *.png
 *.jpeg
 *.jpg
+.fake

@@ -25,3 +25,7 @@
     * Starting [Advanced algorithms](https://www.coursera.org/learn/advanced-learning-algorithms/home/week/1) week1, Neural network intuition
   * Tue (12. Nov)
     * Watching Neural network model part, it is sort of obvious because I already watched the neural network on scratch.
+
+
+
+    

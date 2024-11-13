@@ -56,3 +56,4 @@ msbuild.wrn
 *.jpeg
 *.jpg
 .fake
+*.csv

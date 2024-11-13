@@ -26,3 +26,5 @@
   * Tue (12. Nov)
     * Watching Neural network model part, it is sort of obvious because I already watched the neural network on scratch.
     * Watching TensorFlow implementation vido until Building a neural network
+  * Wed (13. Nov)
+    * Finishing TensorFlow implementation part and studying roasting coffee with tensorflow project

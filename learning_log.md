@@ -28,3 +28,7 @@
     * Watching TensorFlow implementation vido until Building a neural network
   * Wed (13. Nov)
     * Finishing TensorFlow implementation part and studying roasting coffee with tensorflow project
+  * Friday (15. Nov)
+    * Studying CoffeeRoastingNumpy notebook
+    * AGI video, human intelligence and neural network analog
+    * Starting Vectorization first video  

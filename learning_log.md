@@ -32,7 +32,12 @@
     * Studying CoffeeRoastingNumpy notebook
     * AGI video, human intelligence and neural network analog
     * Starting Vectorization first video 
-
   * Sunday (17. Nov):
     * Publishing an article about week1
     * Watching week 2 until Back propagation
+  
+  Week 47:
+  
+  * Monday (18. Nov)
+    * Watchin week 2, derivate video in back propagation (super intuitive)
+    * Watchin the integration video on youtube

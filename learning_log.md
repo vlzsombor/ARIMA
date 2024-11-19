@@ -39,5 +39,7 @@
   Week 47:
   
   * Monday (18. Nov)
-    * Watchin week 2, derivate video in back propagation (super intuitive)
-    * Watchin the integration video on youtube
+    * Watching week 2, derivate video in back propagation (super intuitive)
+    * Watching the integration video on youtube
+  * Tuesday (19. Nov)
+    * Finishing Back propgation chapter

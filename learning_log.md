@@ -43,3 +43,5 @@
     * Watching the integration video on youtube
   * Tuesday (19. Nov)
     * Finishing Back propgation chapter
+  * 21 Nov:
+    * Week 3 Advice for applying machine learning (test training cross validation)

@@ -45,3 +45,6 @@
     * Finishing Back propgation chapter
   * 21 Nov:
     * Week 3 Advice for applying machine learning (test training cross validation)
+    * Writing partly an article about the week 3 advice for applying machine learning
+  * Friday (22. Nov):
+    * Week 3 Bias and variance establishing a baseline leve of perforamnce

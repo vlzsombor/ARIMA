@@ -48,3 +48,7 @@
     * Writing partly an article about the week 3 advice for applying machine learning
   * Friday (22. Nov):
     * Week 3 Bias and variance establishing a baseline leve of perforamnce
+  * Saturday (23. Nov):
+    * Week 3 bias and variance finish and article
+  * Sunday (24. Nov):
+    * Machine learning development process watchin videos

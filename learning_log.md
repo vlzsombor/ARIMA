@@ -52,3 +52,8 @@
     * Week 3 bias and variance finish and article
   * Sunday (24. Nov):
     * Machine learning development process watchin videos
+  
+  Week 48:
+
+  * Tuesday (26. Nov)
+    * Writing article for third week, third part

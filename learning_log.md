@@ -59,3 +59,5 @@
     * Writing article for third week, third part
   * Wednesday (27. Nov)
     * Watchin Skewed dataset (Week 3/4)
+  * Thursday (28. Nov)
+    * Finishing week 3

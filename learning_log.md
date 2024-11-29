@@ -61,3 +61,6 @@
     * Watchin Skewed dataset (Week 3/4)
   * Thursday (28. Nov)
     * Finishing week 3
+    * Watching week 4 + writing an article subsection
+  * Friday (29. Nov)
+    * Watching week 4 /2 subsection

@@ -65,6 +65,8 @@
   * Friday (29. Nov)
     * Watching week 4 /2 subsection
 
+  Week 49:
 
-
+  * Tuesday (03. Dec)
+    * Finishin week4, writing a blog post
     

@@ -68,5 +68,7 @@
   Week 49:
 
   * Tuesday (03. Dec)
-    * Finishin week4, writing a blog post
+    * Finishing week4, writing a blog post
+  * Wednesday (04. Dec)
+    * Clustering K-means algorithm (3. video)
     

@@ -71,4 +71,6 @@
     * Finishing week4, writing a blog post
   * Wednesday (04. Dec)
     * Clustering K-means algorithm (3. video)
-    
+  * Thursday (05. Dec)
+    * Clustering K-means algorithm (4. video)
+    * Practice lab start

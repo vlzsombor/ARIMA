@@ -74,3 +74,10 @@
   * Thursday (05. Dec)
     * Clustering K-means algorithm (4. video)
     * Practice lab start
+* Friday?
+* Saturday (07. Dec):
+	* Writing article of week 1 subsection 1
+	* Watching anomaly detection
+* Sunday (08. Dec)
+	* Writing article of anomaly detection
+	* Watching week 2 subsection 1 "collaborative filtering"

@@ -81,3 +81,10 @@
 * Sunday (08. Dec)
 	* Writing article of anomaly detection
 	* Watching week 2 subsection 1 "collaborative filtering"
+
+Week 50:
+
+* Monday (9. 12)
+	* Rewatching week 2 first [subsection](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/e6AxK/binary-labels-favs-likes-and-clicks) 
+		* 57 min
+	* 

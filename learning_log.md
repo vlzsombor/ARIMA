@@ -89,3 +89,7 @@ Week 50:
 		* 57 min
 * Tuesday (10. 12)
 	* Recommender system implementation detail part
+Week 51:
+* Monday (16. 12)
+	* I didn't log last week, today a watched Unsupervised Learning, Recommenders, Reinforcement Learning week 3 Continuous state spaces [Algorithm refinement: Improved neural network architecture](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/hpmUe/algorithm-refinement-improved-neural-network-architecture#)
+	* 

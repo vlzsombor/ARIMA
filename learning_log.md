@@ -85,11 +85,12 @@
 Week 50:
 
 * Monday (9. 12)
-	* Rewatching week 2 first [subsection](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/e6AxK/binary-labels-favs-likes-and-clicks) 
-		* 57 min
+  * Rewatching week 2 first [subsection](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/e6AxK/binary-labels-favs-likes-and-clicks) 
+  	* 57 min
 * Tuesday (10. 12)
-	* Recommender system implementation detail part
-Week 51:
+  * Recommender system implementation detail part
+  Week 51:
 * Monday (16. 12)
-	* I didn't log last week, today a watched Unsupervised Learning, Recommenders, Reinforcement Learning week 3 Continuous state spaces [Algorithm refinement: Improved neural network architecture](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/hpmUe/algorithm-refinement-improved-neural-network-architecture#)
-	* 
+  * I didn't log last week, today a watched Unsupervised Learning, Recommenders, Reinforcement Learning week 3 Continuous state spaces [Algorithm refinement: Improved neural network architecture](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/hpmUe/algorithm-refinement-improved-neural-network-architecture#)
+* Tuesday (17. 12)
+  * Finishing last videos of reinforcement learning, writing article and finished the specialization.

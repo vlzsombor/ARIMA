@@ -94,3 +94,6 @@ Week 50:
   * I didn't log last week, today a watched Unsupervised Learning, Recommenders, Reinforcement Learning week 3 Continuous state spaces [Algorithm refinement: Improved neural network architecture](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/lecture/hpmUe/algorithm-refinement-improved-neural-network-architecture#)
 * Tuesday (17. 12)
   * Finishing last videos of reinforcement learning, writing article and finished the specialization.
+
+* 19.12
+  * https://learn.deeplearning.ai/courses/open-source-models-hugging-face/lesson/6/zero-shot-audio-classification 

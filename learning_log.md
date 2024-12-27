@@ -98,3 +98,12 @@ Week 50:
 * 19.12
   * https://learn.deeplearning.ai/courses/open-source-models-hugging-face/lesson/6/zero-shot-audio-classification 
   * 1:50 https://learn.deeplearning.ai/courses/open-source-models-hugging-face/lesson/7/automatic-speech-recognition
+
+
+* 26.12
+  * Watching hugging face tutorial videos
+
+* 27.12
+  * Finishing hugging face
+  * starting [pong](https://youtu.be/2f6TmKm7yx0)
+  

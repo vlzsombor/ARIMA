@@ -105,5 +105,13 @@ Week 50:
 
 * 27.12
   * Finishing hugging face
-  * starting [pong](https://youtu.be/2f6TmKm7yx0)
-  
+  * Starting [pong](https://youtu.be/2f6TmKm7yx0) tutorial
+
+* 28.12
+  * Pong tutorial
+
+* 29.12
+  * Pong tutorial
+
+* 30.12
+  * Starting LL model video until 36:00 https://youtu.be/PaCmpygFfXo?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
